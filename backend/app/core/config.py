@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     
     # OpenAI (fallback for easier testing)
     OPENAI_API_KEY: str | None = Field(default=None, description="OpenAI API key for fallback")
-    OPENAI_MODEL: str = Field(default="gpt-4o-mini", description="OpenAI model to use (gpt-4o-mini supports true streaming)")
+    OPENAI_MODEL: str = Field(default="gpt-4o-mini", description="OpenAI model to use (gpt-4o-mini is optimized for fast, low-latency streaming responses)")
     USE_OPENAI_FALLBACK: bool = Field(default=False, description="Use OpenAI instead of Azure OpenAI when available")
     
     # Azure configuration (optional when using OpenAI fallback)
